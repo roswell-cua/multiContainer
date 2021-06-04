@@ -1,6 +1,4 @@
 sudo: required
-language: generic
-
 services:
   - docker
 
@@ -9,7 +7,8 @@ before_install:
 
 script:
   - docker run -e CI=true rcua93/react-test npm test
-after_successrcua93
+
+after_success:
   - docker build -t rcua93/multi-client ./client
   - docker build -t rcua93/multi-nginx ./nginx
   - docker build -t rcua93/multi-server ./server
