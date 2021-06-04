@@ -15,8 +15,8 @@ after_successrcua93
   - docker build -t rcua93/multi-server ./server
   - docker build -t rcua93/multi-worker ./worker
 
-  - echo "$DOCKER_PArcua93ker login -u "$DOCKER_ID" --password-stdin
-  # Take those imagercua93em to docker hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
   - docker push rcua93/multi-client
   - docker push rcua93/multi-nginx
   - docker push rcua93/multi-server
