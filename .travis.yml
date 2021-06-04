@@ -19,4 +19,4 @@ after_success:
   - docker push rcua93/multi-client
   - docker push rcua93/multi-nginx
   - docker push rcua93/multi-server
-  - docker push rcua93/multi-workerrcua93
+  - docker push rcua93/multi-worker
