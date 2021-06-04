@@ -8,7 +8,7 @@ before_install:
   - docker build -t rcua93/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true rcua93/react-test npm testrcua93
+  - docker run -e CI=true rcua93/react-test npm test
 after_successrcua93
   - docker build -t rcua93/multi-client ./client
   - docker build -t rcua93/multi-nginx ./nginx
